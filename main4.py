@@ -3,8 +3,11 @@ class Employee:
     _age = 0
     _wage = 0
 
-    def Printer(self):
-        print(f"Name: {self._name}\nAge: {self._age}\nWage: {self._wage}")
+    def __str__(self):
+        return f"Name: {self._name}\nAge: {self._age}\nWage: {self._wage}"
+
+    def __int__(self):
+        return self._age
 
 
 class President(Employee):
@@ -32,6 +35,16 @@ p = President("asbfdhsa", 49, 12000)
 m = Manager("nkhjnfd", 39, 6000)
 w = Worker("qwebqjh", 40, 1200)
 
-p.Printer()
-m.Printer()
-w.Printer()
+print(p)
+print()
+print(m)
+print()
+print(w)
+
+print()
+
+print(int(p))
+print()
+print(int(m))
+print()
+print(int(w))
